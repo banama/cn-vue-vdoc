@@ -1,0 +1,18 @@
+<script>
+export default {
+    template: "demo"
+}
+</script>
+
+<config>
+{
+    "title": "Elastic Header",
+    "type": "demo",
+    "template": "demo",
+    "order": 7
+}
+</config>
+
+<template>
+<iframe width="100%" height="500" src="https://jsfiddle.net/yyx990803/2eg8kbyk/embedded/result,html,js,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+</template>
