@@ -1,6 +1,7 @@
 <config>
 {
     "title": "构建大型应用",
+    "order": 18,
     "subtitle": true
 }
 </config>

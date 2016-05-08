@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "计算属性"
+    "subtitle": true,
+    "title": "计算属性",
+    "order": 6
 }
 </config>
 

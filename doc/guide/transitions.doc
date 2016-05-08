@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "过渡"
+    "title": "过渡",
+    "subtitle": true,
+    "order": 12
 }
 </config>
 

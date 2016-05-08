@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "安装"
+    "title": "安装",
+    "subtitle": true,
+    "order": 0
 }
 </config>
 

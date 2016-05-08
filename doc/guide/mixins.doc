@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "混合"
+    "title": "混合",
+    "subtitle": true,
+    "order": 17
 }
 </config>
 

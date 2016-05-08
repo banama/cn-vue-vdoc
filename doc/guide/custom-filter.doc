@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "自定义过滤器"
+    "title": "自定义过滤器",
+    "subtitle": true,
+    "order": 16
 }
 </config>
 

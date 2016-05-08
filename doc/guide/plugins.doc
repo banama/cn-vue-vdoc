@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "插件"
+    "title": "插件",
+    "subtitle": true,
+    "order": 18
 }
 </config>
 

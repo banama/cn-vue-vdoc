@@ -40,21 +40,6 @@ em
 p
     word-spacing 0.05em
 
-a.button
-    display inline-block
-    font-family $code-font
-    font-weight 700
-    color #fff
-    background-color lighten($green, 8%)
-    border-bottom 2px solid darken($green, 12%)
-    padding 12px 14px
-    border-radius 4px
-    transition all .15s ease
-    &:hover
-        background-color lighten($green, 15%)
-        -webkit-transform translate(0, -2px)
-        transform translate(0, -2px)
-
 .highlight
     overflow-x auto
     position relative
@@ -121,15 +106,6 @@ a.button
         margin-bottom 5px
     img
         width 125px
-    // .carbon-img, .carbon-text
-    //     display block
-    //     margin-bottom 6px
-    //     font-weight normal
-    //     color $medium
-    // .carbon-poweredby
-    //     color #aaa
-    //     font-weight normal
-
 #nav
     .nav-link
         cursor pointer
@@ -204,26 +180,3 @@ a.button
             position absolute
             top 2px
             left 26px
-
-#qrcode
-    display none
-    position fixed
-    z-index 9999
-    width 300px
-    padding 20px 30px 30px
-    top 50%
-    left 50%
-    margin-top -230px
-    margin-left -180px
-    border 1px solid #eee
-    box-shadow 0 4px 12px rgba(0,0,0,.2)
-    text-align center
-    background-color #fff
-    transition all .25s ease-in-out
-    img
-        display block
-        width 300px
-        height 300px
-    &.hidden
-        opacity 0
-        transform translate3d(0, 20px, 0)

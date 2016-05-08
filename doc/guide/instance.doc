@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "Vue 实例"
+    "title": "Vue 实例",
+    "subtitle": true,
+    "order": 4
 }
 </config>
 

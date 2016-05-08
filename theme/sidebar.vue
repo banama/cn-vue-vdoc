@@ -1,5 +1,8 @@
 <template>
     <div class="sidebar">
+        <div class="nav-mobile">
+            <navs></navs>
+        </div>
         <ul class="menu-root">
         <template v-for="doc in catalog">
             <template v-if="doc.route == $route.path">
@@ -31,23 +34,21 @@ export default {
                 return []
             }
         },
-        subtitle: {
-            type: Boolean,
+        subtitles: {
+            type: Array,
             default: function(){
-                return false
+                return []
             }
         }
     },
     ready: function(){
-    },
-    computed: {
-        subtitles: function(){
-            if(!this.subtitle){
-                return []
+        window.onscroll = function(){
+            var top = document.documentElement.scrollTop || document.body.scrollTop
+            if(top >= 90){
+                document.querySelector('#main').classList = ['fix-sidebar']
             }
             else{
-                var subtitles = vdoc.moutData[this.$route.path].subtitles
-                return subtitles
+                document.querySelector('#main').classList = []
             }
         }
     },
@@ -56,19 +57,27 @@ export default {
             var dom = document.querySelectorAll('.--vdoc-title--')[index]
             document.documentElement.scrollTop = document.body.scrollTop = dom.offsetTop;
         }
+    },
+    components: {
+        navs: function(res){
+            require(['./nav.vue'], res)
+        }
     }
 }
 </script>
 
 <style lang="stylus">
 @import './css/_settings.styl'
+
+.nav-mobile
+    display none
 .sidebar
     position absolute
     z-index 10
     top 0
     left 60px
     bottom 0
-    padding 3em 0
+    padding 2.2em 0
     width 260px
     margin-right 20px
     overflow-x hidden
@@ -82,9 +91,6 @@ export default {
         margin 0
         line-height 1.8em
         padding-left 1em
-    .version-select
-        vertical-align middle
-        margin-left 5px
     .menu-root
         padding-left 0
     .menu-sub
@@ -126,4 +132,25 @@ export default {
     font-size 1em
     padding-left .8rem
 
+@media screen and (max-width: 720px)
+    .nav-mobile
+        display block
+        margin-left -.6em
+    .sidebar
+        position fixed
+        background-color #f9f9f9
+        height 100%
+        top 0
+        left 0
+        padding 60px 30px 20px
+        box-shadow 0 0 10px rgba(0,0,0,.2)
+        box-sizing border-box
+        transition all .4s cubic-bezier(0.4, 0, 0, 1)
+        -webkit-transform translate(-320px, 0)
+        transform translate(-320px, 0)
+        .main-menu
+            display block
+        &.open
+            -webkit-transform translate(0, 0)
+            transform translate(0, 0)
 </style>

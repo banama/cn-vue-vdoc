@@ -1,6 +1,7 @@
 <template>
-    <div id="main" class="fix-sidebar">
-        <sidebar :catalog=filter :subtitle=true></sidebar>
+    <topheader></topheader>
+    <div id="main">
+        <sidebar :catalog=filter :subtitles=subtitles></sidebar>
         <div class="content api with-sidebar">
             {{{doc.html}}}
         </div>
@@ -25,10 +26,13 @@ export default {
     components: {
         sidebar: function(res){
             require(['./sidebar.vue'], res)
+        },
+        topheader: function(res){
+            require(['./header.vue'], res)
         }
     },
     computed: {
-         filter: function(){
+        filter: function(){
             return vdoc.sort(vdoc.getType('api'))
         },
         doc: function(){
@@ -40,6 +44,9 @@ export default {
                 })
             }
             return this.document
+        },
+        subtitles: function(){
+            return !!this.document.html ? vdoc.moutData[this.$route.path].subtitles : []
         }
     }
 }

@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "深入响应式原理"
+    "title": "深入响应式原理",
+    "subtitle": true,
+    "order": 14
 }
 </config>
 

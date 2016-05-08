@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "条件渲染"
+    "subtitle": true,
+    "title": "条件渲染",
+    "order": 8
 }
 </config>
 

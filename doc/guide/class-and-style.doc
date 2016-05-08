@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "Class 与 Style 绑定"
+    "title": "Class 与 Style 绑定",
+    "subtitle": true,
+    "order": 7
 }
 </config>
 

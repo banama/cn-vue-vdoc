@@ -1,7 +1,8 @@
 <config>
 {
     "title": "组件",
-    "template": "test"
+    "subtitle": true,
+    "order": 13
 }
 </config>
 

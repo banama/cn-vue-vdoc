@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "对比其它框架"
+    "title": "对比其它框架",
+    "subtitle": true,
+    "order": 19
 }
 </config>
 

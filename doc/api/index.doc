@@ -5,13 +5,10 @@ export default {
 }
 </script>
 
-<config>
-{
-    "title": "API",
-    "template": "api",
-    "type": "api",
-    "subtitle": true
-}
+<config lang='yaml'>
+title: "API"
+subtitle: true
+type: "api"
 </config>
 
 <template>

@@ -2,7 +2,7 @@ var build = require('vdoc/build.js')
 var VdocPlugin = require('vdoc-webpack-plugin')
 
 build.live({
-    port: 9999
+    port: 9998
 },  function(){
     this.setEntry({
         main: ['./src/main.js']
@@ -15,6 +15,10 @@ build.live({
     this.loaders({
         test: /\.styl$/,
         loader: 'stylus'
+    })
+    this.loaders({
+        test: /\.png$/,
+        loader: 'url-loader'
     })
     this.plugins(
         new VdocPlugin({

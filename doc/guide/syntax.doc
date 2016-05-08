@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "数据绑定语法"
+    "title": "数据绑定语法",
+    "subtitle": true,
+    "order": 5
 }
 </config>
 

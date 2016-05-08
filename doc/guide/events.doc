@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "方法与事件处理器"
+    "title": "方法与事件处理器",
+    "subtitle": true,
+    "order": 10
 }
 </config>
 

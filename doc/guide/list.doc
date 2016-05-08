@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "列表渲染"
+    "title": "列表渲染",
+    "subtitle": true,
+    "order": 9
 }
 </config>
 

@@ -1,7 +1,7 @@
 var build = require('vdoc/build.js')
 var VdocPlugin = require('vdoc-webpack-plugin')
 
-build.dev(function(){
+build.pro(function(){
     this.setEntry({
         main: ['./src/main.js']
     })

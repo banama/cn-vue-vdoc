@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "自定义指令"
+    "title": "自定义指令",
+    "subtitle": true,
+    "order": 15
 }
 </config>
 

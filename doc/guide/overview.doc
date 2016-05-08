@@ -1,6 +1,8 @@
 <config>
 {
-    "title": "概述"
+    "title": "概述",
+    "subtitle": true,
+    "order": 3
 }
 </config>
 
