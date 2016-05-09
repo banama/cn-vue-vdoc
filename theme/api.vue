@@ -9,20 +9,9 @@
 </template>
 
 <script>
+import vdoc from '../src/main'
 export default {
-    props: {
-        document: {
-            type: Object,
-            default: function(){
-                return {
-                    html: "",
-                }
-            }
-        }
-    },
-    ready: function(){
-        vdoc.evalScript(this.document.html)
-    },
+    mixins: [vdoc.mixin],
     components: {
         sidebar: function(res){
             require(['./sidebar.vue'], res)
@@ -34,19 +23,6 @@ export default {
     computed: {
         filter: function(){
             return vdoc.sort(vdoc.getType('api'))
-        },
-        doc: function(){
-            if(!!this.document.html){
-                var self = this
-                document.title = vdoc.moutData[this.$route.path].title
-                Vue.nextTick(function(){
-                    vdoc.evalScript(self.document.html)
-                })
-            }
-            return this.document
-        },
-        subtitles: function(){
-            return !!this.document.html ? vdoc.moutData[this.$route.path].subtitles : []
         }
     }
 }

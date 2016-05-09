@@ -1,8 +1,7 @@
 import Vdoc from 'vdoc'
-window.vdoc = new Vdoc()
-
-var config = require("../vdoc.vdoc")
-vdoc.mout(config)
+var vdoc = new Vdoc()
+vdoc.mout(require("../vdoc.vdoc"))
 vdoc.theme(require('../theme'))
 vdoc.addRoute('/', require("../theme/root.vue"))
 vdoc.start("#app", {history: false})
+export default vdoc

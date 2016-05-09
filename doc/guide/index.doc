@@ -14,25 +14,25 @@
 ### Hello World
 
 ``` html
-<div id="app">
+<div id="app1">
   {{ message }}
 </div>
 ```
 ``` js
 new Vue({
-  el: '#app',
+  el: '#app1',
   data: {
     message: 'Hello Vue.js!'
   }
 })
 ```
 
-<div id="app" class="demo">
+<div id="app1" class="demo">
   {{ message }}
 </div>
 <script>
 new Vue({
-  el: '#app',
+  el: '#app1',
   data: {
     message: 'Hello Vue.js!'
   }
@@ -43,14 +43,14 @@ new Vue({
 ### 双向绑定
 
 ``` html
-<div id="app">
+<div id="ap2p">
   <p>{{ message }}</p>
   <input v-model="message">
 </div>
 ```
 ``` js
 new Vue({
-  el: '#app',
+  el: '#app2',
   data: {
     message: 'Hello Vue.js!'
   }
@@ -74,26 +74,27 @@ new Vue({
 ### 渲染列表
 
 ``` html
-<div id="app">
+<div id="app3">
   <ul>
     <li v-for="todo in todos">
-      {{ todo.text }}
+        {{ todo.text }}
     </li>
   </ul>
 </div>
 ```
 ``` js
-new Vue({
-  el: '#app',
-  data: {
-    todos: [
-      { text: 'Learn JavaScript' },
-      { text: 'Learn Vue.js' },
-      { text: 'Build Something Awesome' }
-    ]
-  }
-})
+    new Vue({
+      el: '#app3',
+      data: {
+        todos: [
+          { text: 'Learn JavaScript' },
+          { text: 'Learn Vue.js' },
+          { text: 'Build Something Awesome' }
+        ]
+      }
+    })
 ```
+
 
 <div id="app3" class="demo">
   <ul>
@@ -103,38 +104,38 @@ new Vue({
   </ul>
 </div>
 <script>
-new Vue({
-  el: '#app3',
-  data: {
-    todos: [
-      { text: 'Learn JavaScript' },
-      { text: 'Learn Vue.js' },
-      { text: 'Build Something Awesome' }
-    ]
-  }
-})
+    new Vue({
+      el: '#app3',
+      data: {
+        todos: [
+          { text: 'Learn JavaScript' },
+          { text: 'Learn Vue.js' },
+          { text: 'Build Something Awesome' }
+        ]
+      }
+    })
 </script>
 
 
 ### 处理用户输入
 
 ``` html
-<div id="app">
+<div id="app4">
   <p>{{ message }}</p>
   <button v-on:click="reverseMessage">Reverse Message</button>
 </div>
 ```
 ``` js
 new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue.js!'
-  },
-  methods: {
-    reverseMessage: function () {
-      this.message = this.message.split('').reverse().join('')
+    el: '#app4',
+    data: {
+        message: 'Hello Vue.js!'
+    },
+    methods: {
+        reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+        }
     }
-  }
 })
 ```
 
@@ -154,13 +155,13 @@ new Vue({
     }
   }
 })
-</script>
+    </script>
 
 
 ### 综合
 
 ``` html
-<div id="app">
+<div id="app5">
   <input v-model="newTodo" v-on:keyup.enter="addTodo">
   <ul>
     <li v-for="todo in todos">
@@ -169,41 +170,9 @@ new Vue({
     </li>
   </ul>
 </div>
-```
-``` js
-new Vue({
-  el: '#app',
-  data: {
-    newTodo: '',
-    todos: [
-      { text: 'Add some todos' }
-    ]
-  },
-  methods: {
-    addTodo: function () {
-      var text = this.newTodo.trim()
-      if (text) {
-        this.todos.push({ text: text })
-        this.newTodo = ''
-      }
-    },
-    removeTodo: function (index) {
-      this.todos.splice(index, 1)
-    }
-  }
-})
 ```
 
-<div id="app5" class="demo">
-  <input v-model="newTodo" v-on:keyup.enter="addTodo">
-  <ul>
-    <li v-for="todo in todos">
-      <span>{{ todo.text }}</span>
-      <button v-on:click="removeTodo($index)">X</button>
-    </li>
-  </ul>
-</div>
-<script>
+``` js
 new Vue({
   el: '#app5',
   data: {
@@ -225,6 +194,40 @@ new Vue({
     }
   }
 })
+```
+
+
+<div id="app5" class="demo">
+    <input v-model="newTodo" v-on:keyup.enter="addTodo">
+    <ul>
+    <li v-for="todo in todos">
+        <span>{{ todo.text }}</span>
+        <button v-on:click="removeTodo($index)">X</button>
+    </li>
+    </ul>
+</div>
+<script>
+    new Vue({
+      el: '#app5',
+      data: {
+        newTodo: '',
+        todos: [
+          { text: 'Add some todos' }
+        ]
+      },
+      methods: {
+        addTodo: function () {
+          var text = this.newTodo.trim()
+          if (text) {
+            this.todos.push({ text: text })
+            this.newTodo = ''
+          }
+        },
+        removeTodo: function (index) {
+          this.todos.splice(index, 1)
+        }
+      }
+    })
 </script>
 
 

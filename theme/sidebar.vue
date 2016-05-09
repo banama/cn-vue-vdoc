@@ -17,7 +17,8 @@
             </li>
             </template>
             <template v-else>
-                <li><a v-link="doc.route" class="sidebar-link">{{doc.title}}</a>
+                <li>
+                    <a v-link="doc.route" class="sidebar-link">{{doc.title}}</a>
                 </li>
             </template>
         </template>
@@ -54,7 +55,7 @@ export default {
     },
     methods:{
         jump: function(index){
-            var dom = document.querySelectorAll('.--vdoc-title--')[index]
+            var dom = document.querySelectorAll('.v--vdoc-title--')[index]
             document.documentElement.scrollTop = document.body.scrollTop = dom.offsetTop;
         }
     },

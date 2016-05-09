@@ -1,14 +1,8 @@
-<script>
-export default {
-    template: "api",
-    title: "API"
-}
-</script>
-
 <config lang='yaml'>
 title: "API"
 subtitle: true
 type: "api"
+template: "api"
 </config>
 
 <template>
@@ -2037,19 +2031,19 @@ type: "api"
 
   上例使用静态参数，当然可以使用动态参数作为搜索目标或搜索字段。配合 `v-model` 我们可以轻松实现输入提示效果：
 
-  ``` html
-  <div id="filter-by-example">
+``` html
+<div id="filter-by-example">
     <input v-model="name">
     <ul>
       <li v-for="user in users | filterBy name in 'name'">
         {{ user.name }}
       </li>
     </ul>
-  </div>
-  ```
+</div>
+```
 
-  ``` js
-  new Vue({
+``` js
+new Vue({
     el: '#filter-by-example',
     data: {
       name: '',
@@ -2059,26 +2053,26 @@ type: "api"
         { name: 'Jackie' }
       ]
     }
-  })
-  ```
+})
+```
 
-  <div id="filter-by-example" class="demo">
+<div id="filter-by-example" class="demo">
     <input v-model="name">
     <ul>
       <li v-for="user in users | filterBy name in 'name'">
         {{ user.name }}
       </li>
     </ul>
-  </div>
-  <script>
-  new Vue({
+</div>
+<script>
+new Vue({
     el: '#filter-by-example',
     data: {
       name: '',
       users: [{ name: 'Bruce' }, { name: 'Chuck' }, { name: 'Jackie' }]
     }
-  })
-  </script>
+})
+</script>
 
 - **另一个示例：**
 
@@ -2172,83 +2166,83 @@ type: "api"
 
   使用两个键名排序：
 
-  ``` html
-  <ul>
+``` html
+<ul>
     <li v-for="user in users | orderBy 'lastName' 'firstName'">
       {{ user.lastName }} {{ user.firstName }}
     </li>
-  </ul>
-  ```
+</ul>
+```
 
-  <div id="orderby-example" class="demo">
+<div id="orderby-example" class="demo">
     <button @click="order = order * -1">Reverse Sort Order</button>
     <ul>
       <li v-for="user in users | orderBy 'name' order">
         {{ user.name }}
       </li>
     </ul>
-  </div>
-  <script>
-  new Vue({
+</div>
+<script>
+new Vue({
     el: '#orderby-example',
     data: {
       order: 1,
       users: [{ name: 'Bruce' }, { name: 'Chuck' }, { name: 'Jackie' }]
     }
-  })
-  </script>
+})
+</script>
 
   使用一个函数排序：
 
-  ``` html
-  <div id="orderby-compare-example" class="demo">
+``` html
+<div id="orderby-compare-example" class="demo">
     <button @click="order = order * -1">Reverse Sort Order</button>
     <ul>
       <li v-for="user in users | orderBy ageByTen">
         {{ user.name }} - {{ user.age }}
       </li>
     </ul>
-  </div>
-  ```
+</div>
+```
 
-  ``` js
-  new Vue({
-    el: '#orderby-compare-example',
-    data: {
-      order: 1,
-      users: [
-        {
-          name: 'Jackie',
-          age: 62
-        },
-        {
-          name: 'Chuck',
-          age: 76
-        },
-        {
-          name: 'Bruce',
-          age: 61
-        }
-      ]
+``` js
+new Vue({
+el: '#orderby-compare-example',
+data: {
+  order: 1,
+  users: [
+    {
+      name: 'Jackie',
+      age: 62
     },
-    methods: {
-      ageByTen: function (a, b) {
-        return Math.floor(a.age / 10) - Math.floor(b.age / 10)
-      }
+    {
+      name: 'Chuck',
+      age: 76
+    },
+    {
+      name: 'Bruce',
+      age: 61
     }
-  })
-  ```
+  ]
+},
+methods: {
+  ageByTen: function (a, b) {
+    return Math.floor(a.age / 10) - Math.floor(b.age / 10)
+  }
+}
+})
+```
 
-  <div id="orderby-compare-example" class="demo">
+<div id="orderby-compare-example" class="demo">
     <button @click="order = order * -1">Reverse Sort Order</button>
     <ul id="orderby-compare-example">
-      <li v-for="user in users | orderBy ageByTen order">
+      <template v-for="user in users | orderBy ageByTen order">
         {{ user.name }} - {{ user.age }}
-      </li>
+      </template>
     </ul>
-  </div>
-  <script>
-  new Vue({
+</div>
+<script>
+new Vue({
     el: '#orderby-compare-example',
     data: {
       order: 1,
@@ -2272,8 +2266,8 @@ type: "api"
         return Math.floor(a.age / 10) - Math.floor(b.age / 10)
       }
     }
-  })
-  </script>
+})
+</script>
 
 ## 数组扩展方法
 
