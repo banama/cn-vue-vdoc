@@ -7,6 +7,7 @@
 </config>
 
 <template>
+
 ## 方法处理器
 
 可以用 `v-on` 指令监听 DOM 事件：
@@ -32,7 +33,6 @@ var vm = new Vue({
     }
   }
 })
-
 // 也可以在 JavaScript 代码中调用方法
 vm.greet() // -> 'Hello Vue.js!'
 ```
@@ -40,21 +40,21 @@ vm.greet() // -> 'Hello Vue.js!'
 自己测试一下：
 
 <div id="example" class="demo">
-    <button v-on:click="greet">Greet</button>
-    <script>
-    var vm = new Vue({
-      el: '#example',
-      data: {
-        name: 'Vue.js'
-      },
-      methods: {
-        greet: function (event) {
-          alert('Hello ' + this.name + '!')
-          alert(event.target.tagName)
-        }
-      }
-    })
-    </script>
+<button v-on:click="greet">Greet</button>
+<script>
+var vm = new Vue({
+  el: '#example',
+  data: {
+    name: 'Vue.js'
+  },
+  methods: {
+    greet: function (event) {
+      alert('Hello ' + this.name + '!')
+      alert(event.target.tagName)
+    }
+  }
+})
+</script>
 </div>
 
 ## 内联语句处理器

@@ -25,11 +25,11 @@ Webpack 和 Browserify 不只是模块打包器。两者都提供了源码转换
 
 在典型的 Vue.js 项目中，我们会把界面拆分为多个小组件，每个组件在同一地方封装它的 CSS 样式，模板和 JavaScript 定义，这么做比较好。如上所述，使用 Webpack 或 Browserify 以及合适的源码转换器，我们可以这样写组件：
 
-<img src="/images/vue-component.png">
+<img src="../images/vue-component.png">
 
 如果你喜欢预处理器，甚至可以这么做：
 
-<img src="/images/vue-component-with-pre-processors.png">
+<img src="../images/vue-component-with-pre-processors.png">
 
 你可以使用 Webpack + [vue-loader](https://github.com/vuejs/vue-loader) 或 Browserify + [vueify](https://github.com/vuejs/vueify) 构建这些单文件 Vue 组件。你也可以在 [Webpackbin.com](http://www.webpackbin.com/vue) 上在线尝试！
 
@@ -121,7 +121,7 @@ var vmB = new Vue({
 
 我们把所有的 action 放在 store 内，action 修改 store 的状态。集中管理状态更易于理解状态将怎样变化。组件仍然可以拥有和管理它的私有状态。
 
-![状态管理](/images/state.png)
+![状态管理](../images/state.png)
 
 有一点要注意，不要在 action 中替换原始的状态对象——为了观察到变化，组件和 store 需要共享这个对象。
 

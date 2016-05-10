@@ -74,6 +74,7 @@ html, body
         display inline-block
         font-family $code-font
         font-weight 700
+        width 260px
         color #fff
         background-color lighten($green, 8%)
         border-bottom 2px solid darken($green, 12%)
@@ -113,9 +114,6 @@ html, body
         h1
             font-size 2em
             font-weight 400
-        .buttons
-            max-width 300px
-            margin 1em auto
         a.button
             width 260px
             font-size .8em

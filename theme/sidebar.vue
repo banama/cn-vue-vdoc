@@ -45,11 +45,15 @@ export default {
     ready: function(){
         window.onscroll = function(){
             var top = document.documentElement.scrollTop || document.body.scrollTop
+            var mainDom = document.querySelector('#main')
+            if(mainDom == null){
+                return false
+            }
             if(top >= 90){
-                document.querySelector('#main').classList = ['fix-sidebar']
+                mainDom.classList = ['fix-sidebar']
             }
             else{
-                document.querySelector('#main').classList = []
+                mainDom.classList = []
             }
         }
     },
@@ -136,7 +140,7 @@ export default {
 @media screen and (max-width: 720px)
     .nav-mobile
         display block
-        margin-left -.6em
+        margin-left -1.1em
     .sidebar
         position fixed
         background-color #f9f9f9

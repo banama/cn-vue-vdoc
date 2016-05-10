@@ -100,5 +100,5 @@ var vm = new Vue({
 
 下图说明了实例的生命周期。你不需要立马弄明白所有的东西，不过以后它会有帮助。
 
-![Lifecycle](/images/lifecycle.png)
+![Lifecycle](../images/lifecycle.png)
 </template>
