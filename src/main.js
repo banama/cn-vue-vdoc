@@ -1,5 +1,7 @@
 import Vdoc from 'vdoc'
-var vdoc = new Vdoc()
+var vdoc = new Vdoc({
+    Vue: Vue
+})
 vdoc.mout(require("../vdoc.vdoc"))
 vdoc.theme(require('../theme'))
 vdoc.addRoute('/', require("../theme/root.vue"))

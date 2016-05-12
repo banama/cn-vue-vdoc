@@ -29,7 +29,7 @@ template: "api"
   2. 把所有的锚节点以注释节点显示在 DOM 中，更易于检查渲染结果的结构。
 
 
-  <p class="tip">只有开发版本可以使用调试模式。</p>
+<p class="tip">只有开发版本可以使用调试模式。</p>
 
 ### delimiters
 
